@@ -1,0 +1,9 @@
+(mod (PUBLIC_KEY conditions)
+    (include condition_codes.clib)
+    (include sha256tree.clib)
+
+    (c
+        (list AGG_SIG_ME PUBLIC_KEY (sha256tree conditions))
+        conditions
+    )
+)
